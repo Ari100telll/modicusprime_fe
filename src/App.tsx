@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+// import AppRouter from 'router'
+import {Box, styled} from '@mui/material'
+import AppRouter from "./router";
+import Snackbar from "./modules/common/components/Snackbar";
+// import Snackbar from 'modules/common/components/Snackbar'
+
+const BoxContainerStyled = styled(Box)(() => {
+  return {
+    padding: 0,
+    margin: 0,
+    backgroundColor: 'transparent',
+    height: '100vh',
+    width: '100vw',
+  }
+})
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BoxContainerStyled>
+      <Snackbar />
+      <AppRouter/>
+    </BoxContainerStyled>
+  )
 }
 
-export default App;
+export default App
