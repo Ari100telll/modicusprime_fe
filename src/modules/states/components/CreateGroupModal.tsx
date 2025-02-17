@@ -9,17 +9,15 @@ interface CreateGroupModalProps {
 
 const CreateGroupModal: React.FC<CreateGroupModalProps> = ({open, onClose}) => {
   const [name, setName] = useState('');
-  const [key, setKey] = useState('');
   const [description, setDescription] = useState('');
 
   const [createGroup, {isLoading}] = useCreateStateGroupMutation();
 
   const handleSave = async () => {
-    if (!name.trim() || !key.trim()) return;
+    if (!name.trim()) return;
     try {
       await createGroup({
         name,
-        key,
         description
       }).unwrap();
       onClose();
@@ -38,13 +36,6 @@ const CreateGroupModal: React.FC<CreateGroupModalProps> = ({open, onClose}) => {
           margin="dense"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        />
-        <TextField
-          label="Key"
-          fullWidth
-          margin="dense"
-          value={key}
-          onChange={(e) => setKey(e.target.value)}
         />
         <TextField
           label="Description"

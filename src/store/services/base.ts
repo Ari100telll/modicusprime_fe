@@ -14,6 +14,9 @@ export const BASE_URL = process.env.REACT_APP_BASE_URL
 
 export enum TAG_TYPES {
   Main = 'Main',
+  States = 'States',
+  StatesGroups = 'StatesGroups',
+  Transitions = 'Transitions',
 }
 
 const multipartEndpoints = [

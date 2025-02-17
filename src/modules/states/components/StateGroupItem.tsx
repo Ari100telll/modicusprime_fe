@@ -24,9 +24,6 @@ const StateGroupItem: React.FC<StateGroupItemProps> = ({group, onRefetch}) => {
     >
       <Typography variant="h6">{group.name}</Typography>
       <Typography variant="body2" color="text.secondary">
-        Key: {group.key || 'No key'}
-      </Typography>
-      <Typography variant="body2" color="text.secondary">
         Description: {group.description || 'No description'}
       </Typography>
 

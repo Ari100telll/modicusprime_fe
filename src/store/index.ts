@@ -1,5 +1,5 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit';
-import storage from 'redux-persist/lib/storage'; // localStorage
+import storage from 'redux-persist/lib/storage';
 import {persistReducer, persistStore} from 'redux-persist';
 import {mainApi} from "./services/main";
 import {baseApi} from "./services/base";
@@ -20,7 +20,7 @@ export type RootReducer = ReturnType<typeof rootReducer>;
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['user'], // тільки auth буде збережено
+  whitelist: ['user'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

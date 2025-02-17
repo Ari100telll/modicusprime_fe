@@ -1,9 +1,7 @@
 import React from 'react'
-// import AppRouter from 'router'
 import {Box, styled} from '@mui/material'
 import AppRouter from "./router";
 import Snackbar from "./modules/common/components/Snackbar";
-// import Snackbar from 'modules/common/components/Snackbar'
 
 const BoxContainerStyled = styled(Box)(() => {
   return {
