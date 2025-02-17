@@ -9,9 +9,7 @@ import {
 } from '@reduxjs/toolkit/query/react'
 import {RootState} from '../index'
 import {logout, setTokens} from '../slices/user'
-// import {QueryReturnValue} from '@reduxjs/toolkit/dist/query/baseQueryTypes'
 
-//dev-api.proofkeep.com/api/
 export const BASE_URL = process.env.REACT_APP_BASE_URL
 
 export enum TAG_TYPES {
